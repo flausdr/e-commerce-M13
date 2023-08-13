@@ -1,22 +1,32 @@
-import '../shared/styles/globals.css';
+import '@/shared/styles/globals.scss';
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { PT_Sans_Caption } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+import Header from '@/layouts/Header';
+import Footer from '@/layouts/Footer';
+
+const PTSansCaption = PT_Sans_Caption({
+    subsets: ['latin'],
+    weight: ['400', '700']
+})
 
 export const metadata: Metadata = {
-  title: 'M13',
-  description: 'M13 e-commerce website',
+    title: 'M13',
+    description: 'M13 e-commerce website',
 }
 
 export default function RootLayout({
-  children,
+    children,
 }: {
-  children: React.ReactNode
+    children: React.ReactNode
 }) {
-  return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
-    </html>
-  )
+    return (
+        <html lang="en">
+            <body className={PTSansCaption.className}>
+                <Header />
+                <main>{children}</main>
+                <Footer />
+            </body>
+        </html>
+    )
 }

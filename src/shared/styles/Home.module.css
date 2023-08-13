@@ -1,0 +1,23 @@
+.container{
+    display: block;
+    width: 85vw;
+    margin: 0 auto;
+}
+
+.default-btn{
+    display: block;
+    background-color: #000;
+    border: 1px solid #000;
+    color: #fff;
+    text-align: center;
+    width: fit-content;
+    padding: 8px 30px;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: .15s linear all;
+}
+
+.default-btn:hover{
+    background-color: #fff;
+    color: #000;
+}
